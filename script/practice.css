@@ -1,0 +1,40 @@
+/* comments */
+h2 {
+    color: cyan;
+    background-color: lightgray;
+}
+
+h3 {
+    color: hotpink;
+    font-size: 55px;
+    text-align: center; /* left right center */
+}
+
+h4 {
+    
+}
+
+h5 {
+    background-color: black;
+}
+
+h6 {
+    
+}
+
+.p3resilience {
+    font-family: arial;
+    background-color: hotpink;
+}
+
+.roboticsclub {
+    color: cyan;
+}
+
+.prefects {
+    font-family: times;
+}
+
+#jovan1234 {
+    font-size: 10px;
+}
