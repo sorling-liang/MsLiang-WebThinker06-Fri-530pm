@@ -7,6 +7,40 @@
     <link href="/script/bootstrap.css" rel="stylesheet" />
   </head>
   <body>
+    <script>
+      console.log("hello. my name is Ms Liang");
+      console.warn("this is warning");
+      console.error("some fatal error has occurred!");
+      let mywallet = 100;
+      console.log(mywallet);
+      mywallet = 100 * 5;
+      console.log("my wallet has $" + mywallet);
+      const stringone = "Hello World";
+      console.log(stringone);
+      let number = 50;
+      console.log(number);
+      number = "Alex" + number;
+      console.log(number);
+
+      if (50 == "50") {
+        console.log("so weird");
+      }
+      else {
+        console.log("python will say they are not equal");
+      }
+    </script>
+    <!-- type: text, number, date, email -->
+    <form>
+      First Name:
+      <input type="text" id="firstname" name="FirstName" placeholder="What is your first name?" />
+      Date of Birth:
+      <input type="date" id="dob" name="DOB" placeholder="Enter your date of birth here" />
+      <!-- type: reset, button, submit -->
+      <button type="reset" class="btn btn-success">Send</button>
+    </form>
+
+
+
     <!-- lesson 10-->
     <table class="table table-striped table-bordered table-hover">
       <thead>
