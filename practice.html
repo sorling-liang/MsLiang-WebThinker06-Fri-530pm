@@ -30,14 +30,31 @@
       }
     </script>
     <!-- type: text, number, date, email -->
+    <div class="container">
     <form>
-      First Name:
-      <input type="text" id="firstname" name="FirstName" placeholder="What is your first name?" />
-      Date of Birth:
-      <input type="date" id="dob" name="DOB" placeholder="Enter your date of birth here" />
+      <div class="row">
+        <div class="col">
+          <label for="firstname">First Name:</label>
+          <input class="form-control is-invalid" type="text" id="firstname" name="FirstName" placeholder="What is your first name?" />
+          <p id="firstnameError" class="text-danger d-none">Please provide your name!</p>
+        </div>
+        <div class="col">
+          <label for="email">Email</label>
+          <input class="form-control" id="email" type="email"/>
+        </div>
+      </div>
+
+      <label for="dob">Date of Birth:</label>
+      <input class="form-control" type="date" id="dob" name="DOB" placeholder="Enter your date of birth here" />
+      
+      <label for="comments">Leave your comments here:</label>
+      <textarea id="comments" type="text" class="form-control" rows="5"></textarea>
+    
       <!-- type: reset, button, submit -->
-      <button type="reset" class="btn btn-success">Send</button>
-    </form>
+      <div class="pt-3 pb-3">
+        <button type="reset" class="btn btn-success">Clear Form</button>
+      </div>
+    </form></div>
 
 
 

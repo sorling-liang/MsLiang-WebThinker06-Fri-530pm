@@ -49,7 +49,17 @@
 		</div>
 		<!-- Key section -->
 		<form class="container py-3">
+				
 			<div class="row gy-3">
+				<div class="col-6">
+					<label for="firstname">First Name:</label>
+					<input class="form-control" type="text" id="firstname" name="FirstName" placeholder="What is your first name?" />
+				</div>
+				<div class="col-6">
+					<label for="email">Email</label>
+					<input class="form-control" id="email" type="email"/>
+				</div>
+				
 				<!-- Label: Name*
 						 Text Input field -->
 
@@ -58,11 +68,19 @@
 
 				<!-- Label: Subject*
 						 Text Input field with placeholder text "Enquiry on how to code"-->
-
+				<label for="subject">Subject:</label>
+				<input class="form-control" type="text" id="subject" name="FirstName" placeholder="What is your first name?" />
+	 
 				<!-- Label: Subject*
 						 Textarea field with the row attribute of value 5-->
+				<label for="Comments">Leave your comments here:</label>
+      			<textarea id="Comments" type="text" class="form-control" rows="5"></textarea>
+    
 			</div>
 			<!-- Code a blue "Send" button inside a <div> according to the criteria stated -->
+			<div class="pt-3 pb-3">
+				<button type="button" class="btn btn-primary">Send</button>
+			</div>
 		</form>
 	</article>
 	<!-- End of coding region -->
