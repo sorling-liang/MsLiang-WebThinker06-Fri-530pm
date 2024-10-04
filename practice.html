@@ -35,12 +35,15 @@
       <div class="row">
         <div class="col">
           <label for="firstname">First Name:</label>
-          <input class="form-control is-invalid" type="text" id="firstname" name="FirstName" placeholder="What is your first name?" />
-          <p id="firstnameError" class="text-danger d-none">Please provide your name!</p>
+          <!-- is-valid green box with a checkmark, is-invalid red box with an exclamation mark -->
+          <input class="form-control" type="text" id="firstname" name="FirstName" placeholder="What is your first name?" />
+          <!-- d-none to hide the paragraph -->
+          <p id="firstnameError" class="text-danger d-none">Name field cannot be left empty or blank!</p>
         </div>
         <div class="col">
           <label for="email">Email</label>
           <input class="form-control" id="email" type="email"/>
+          <p id="emailError" class="text-danger"></p>
         </div>
       </div>
 
@@ -52,7 +55,7 @@
     
       <!-- type: reset, button, submit -->
       <div class="pt-3 pb-3">
-        <button type="reset" class="btn btn-success">Clear Form</button>
+        <button type="button" class="btn btn-primary" onclick="validate();">Send</button>
       </div>
     </form></div>
 
@@ -140,5 +143,40 @@
     <h5 class="p3resilience prefects roboticsclub">h5 is smaller in text size compared to h4</h5>
     <h6 class="p3resilience">heading 6 is the smallest font</h6>
     <p id="jovan1234">Some more text. A new paragraph.</p>
+
+    <script>
+      // put javascript here
+      let validate = () => { 
+        //alert("Hello!");
+        let inputFirstName = document.getElementById("firstname");
+        console.log("I got this: " + inputFirstName.value);
+
+        if (inputFirstName.value.length > 0) {
+          // value is provided
+          inputFirstName.classList = "form-control is-valid";
+          document.getElementById("firstnameError").classList = "text-danger d-none";
+        } 
+        else {
+          // no value or blank
+          inputFirstName.classList = "form-control is-invalid";
+          document.getElementById("firstnameError").classList = "text-danger";
+        }
+
+        // do more checking for other fields
+        // ???
+
+        // any more errors in the form
+        if (document.getElementsByClassName("is-invalid").length > 0) {
+          // found some more errors
+          console.log("please check your form input values!");
+        }
+        else {
+          // no more error!
+          console.log("form is submitted!");
+        }
+      }
+
+
+    </script>
   </body>
 </html>
