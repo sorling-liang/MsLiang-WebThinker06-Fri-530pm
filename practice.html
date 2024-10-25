@@ -7,6 +7,30 @@
     <link href="/script/bootstrap.css" rel="stylesheet" />
   </head>
   <body>
+    <canvas id="drawingboard" width="600" height="600" class="border border-dark">
+    </canvas>
+    <script>
+      const canvas = document.getElementById("drawingboard");
+      //console.log(canvas);
+
+      const centerX = canvas.width / 2;
+      const centerY = canvas.height / 2;
+
+      let ctx = canvas.getContext("2d");
+      //console.log(context);
+      ctx.beginPath();
+      ctx.moveTo(0,0);
+      ctx.lineTo(600,600);
+      ctx.stroke();
+
+      ctx.lineWidth = 10;
+      ctx.fillStyle = "rgb(255,0,0)";
+      ctx.strokeStyle = "rgb(0,255,0)";
+    </script>
+
+
+
+
     <h3 class="text-left">My bucket list for the year 2024</h3>
     <ul>
       <li>Go and visit Mt Fuji</li>
