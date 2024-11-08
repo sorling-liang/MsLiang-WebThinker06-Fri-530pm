@@ -15,6 +15,27 @@ let drawBall = () => {
     ctx.fill();
 }
 
+let animating = () => {
+    if (document.getElementById("playAnimation").checked) {
+        // erase everything
+        ctx.reset();
+
+        // if conditions
+        if (ballX < 0 || ballX > canvas.width) {
+            dX = -dX;
+        }
+        if (ballY < 0 || ballY > canvas.height) {
+            dY = -dY
+        }
+
+        ballX = ballX + dX;
+        ballY = ballY + dY;
+        drawBall();
+    }
+    
+    requestAnimationFrame(animating); // call itself again
+}
+
 window.onload = () => {
     canvas = document.getElementById("drawingBoard");
     ctx = canvas.getContext("2d");
@@ -30,17 +51,4 @@ window.onload = () => {
 
     drawBall();
     animating();
-}
-
-let animating = () => {
-    // erase everything
-    //ctx.reset();
-
-    // if conditions
-
-    ballX = ballX + dX;
-    ballY = ballY + dY;
-    drawBall();
-
-    requestAnimationFrame(animating); // call itself again
 }
